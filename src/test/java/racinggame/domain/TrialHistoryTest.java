@@ -6,12 +6,10 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TrialHistoryTest {
-
     private TrialHistory trialHistory;
 
     @BeforeEach
@@ -27,11 +25,5 @@ class TrialHistoryTest {
         /* Then */
         assertTrue(winners.contains("crong"));
         assertFalse(winners.contains("pobi"));
-    }
-
-    @Test
-    void 문자열을_제대로_만드는지_테스트() {
-        /* Then */
-        assertThat(trialHistory.toString()).isEqualTo("pobi : --\ncrong : ----\n");
     }
 }
